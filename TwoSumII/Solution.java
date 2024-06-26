@@ -5,10 +5,10 @@ public class Solution {
 	public int[] twoSum(int[] nums, int target) {
 		int i = 0, j = nums.length - 1;
 		while (i < j) {
-			int sum = nums[i] + nums[j];
-			if (sum == target) {
+			int currentSum = nums[i] + nums[j];
+			if (currentSum == target) {
 				return new int[] { i + 1, j + 1 }; // Found a pair that adds up to the target
-			} else if (sum < target) {
+			} else if (currentSum < target) {
 				i++; // Increment i to try a larger number from the left side
 			} else {
 				j--; // Decrement j to try a smaller number from the right side
